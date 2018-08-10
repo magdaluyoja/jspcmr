@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="/assets/web/css/style.css" type="text/css" media="screen">
