@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('profile_pic');
-            $table->enum('user_type',['user','admin']);
+            $table->enum('user_type',['member','admin']);
             $table->rememberToken();
             $table->timestamps();
         });

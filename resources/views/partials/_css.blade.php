@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="/assets/web/css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/styles.min.css" type="text/css" media="screen">

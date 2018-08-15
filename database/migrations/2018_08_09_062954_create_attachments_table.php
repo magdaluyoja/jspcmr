@@ -21,6 +21,7 @@ class CreateAttachmentsTable extends Migration
             $table->increments('id');
             $table->integer('content_id');
             $table->string('filename', 225);
+            $table->string('mime_type', 225);
             $table->timestamps();
         });
     }

@@ -150,5 +150,6 @@ return [
         "address"       =>  "住　所",
         "telephone"     =>  "TEL",
         "email"         =>  "メールアドレス",
+        "genre"         =>  "ジャンル",
     ]
 ];

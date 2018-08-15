@@ -42,13 +42,13 @@ color:#6f6f6f;
 
 
 /**** Clearfix ****/
-nav .panel:after, nav#mainNav:after, .newsTitle:after, .bg:after,.post:after, ul.post li:after,nav#mainNav .inner:after{content:""; display: table;clear: both;}
-nav .panel,nav#mainNav,.newsTitle,.bg, .post, ul.post li,nav#mainNav .inner{zoom: 1;}
+nav .menu-panel:after, nav#mainNav:after, .newsTitle:after, .bg:after,.post:after, ul.post li:after,nav#mainNav .inner:after{content:""; display: table;clear: both;}
+nav .menu-panel,nav#mainNav,.newsTitle,.bg, .post, ul.post li,nav#mainNav .inner{zoom: 1;}
 
 
 /* フォーム
 ------------------------------------------------------------*/
-input[type="text"], textarea{
+/*input[type="text"], textarea{
 vertical-align:middle;
 max-width:90%;
 line-height:30px;
@@ -62,11 +62,11 @@ font-size:100%;
 color:#555;
 background:#fcfcfc;
 }
-
-textarea{
+*/
+/*textarea{
 height:auto;
 line-height:1.5;
-}
+}*/
 
 input[type="submit"],input[type="reset"],input[type="button"]{
 padding:3px 10px;
@@ -145,7 +145,7 @@ font-weight:normal;
 #header h2{
 clear:both;
 float:left;
-padding:20px 5px 15px;
+padding:20px 5px 23px;
 color: #515151;
 font-size:160%;
 font-weight:bold;
@@ -625,7 +625,7 @@ text-align:left;
 
 nav#mainNav ul li li.current-menu-item a,nav#mainNav ul li li a:hover{color:#ecf9dc;}
 
-nav div.panel{
+nav div.menu-panel{
 display:block !important;
 float:left;
 }
@@ -666,7 +666,7 @@ a#menu{display:none;}
 	
 	nav#mainNav a#menu:hover{cursor:pointer;}
 	
-	nav .panel{
+	nav .menu-panel{
 	display: none;
 	width:100%;
 	position: relative;
@@ -725,7 +725,7 @@ a#menu{display:none;}
 	nav#mainNav ul li li:last-child a{background:#fbfaf9 url(/assets/web/images/subLast.png) no-repeat 20px 20px;}
 	nav#mainNav ul li li:last-child.current-menu-item a,nav#mainNav ul li li:last-child a:hover,nav#mainNav ul li.current-menu-item li:last-child a:hover{background:#fff url(/assets/web/images/subLast.png) no-repeat 20px -65px;}
 	
-	nav div.panel{float:none;}
+	nav div.menu-panel{float:none;}
 	
 	#mainImg{margin-bottom:20px;}
 }
@@ -745,7 +745,7 @@ a#menu{display:none;}
 	nav#mainNav ul{margin:0 auto;}
 	nav#mainNav ul ul{padding:0;}
 
-	nav div.panel{float:none;}
+	nav div.menu-panel{float:none;}
 	
 	#mainImg img{width:98%;height:auto;}
 
@@ -781,3 +781,8 @@ a#menu{display:none;}
 	img.alignright, img.alignleft{display: block;	margin:5px auto;}
 	.alignright,.alignleft{float:none;}
 }
+
+
+
+/*Custom CSS from Bootsrap*/
+@import "custom";

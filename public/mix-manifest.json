@@ -1,4 +1,8 @@
 {
+    "/js/content.min.js": "/js/content.min.js",
     "/js/login.min.js": "/js/login.min.js",
-    "/css/styles.min.css": "/css/styles.min.css"
+    "/css/admin/styles.min.css": "/css/admin/styles.min.css",
+    "/css/styles.min.css": "/css/styles.min.css",
+    "/js/common.min.js": "/js/common.min.js",
+    "/js/dashboard.min.js": "/js/dashboard.min.js"
 }

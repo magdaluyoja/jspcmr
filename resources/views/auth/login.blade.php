@@ -8,7 +8,7 @@
         <meta name="Jay-R A. Magdaluyo" content="" />
         <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="/css/styles.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/admin/styles.min.css">
     </head>
     <body>
         <div class="padding-15">

@@ -15,9 +15,21 @@
 		</article>
 		<h2 class="title"><span>最新投稿</span></h2>
 		<ul class="post">
-			<li><img width="135" height="92" src="/assets/web/images/banners/eyecatch1.jpg" alt=""><h3><a href="#"><b>2018/7/1 HPを更新</b></a></h3><p>HPを更新しました。会員向けに情報を発信して参ります。</p>
-			<li><img width="135" height="92" src="/assets/web/images/banners/eyecatch3.jpg" alt=""><h3><a href="#"><b>2018/7/1 学会情報を更新</b></a></h3><p>第3回　日本小児心臓MR研究会学術集会情報を掲載しました。</p>
-			<li><img width="135" height="92" src="/assets/web/images/banners/eyecatch4.jpg" alt=""><h3><a href="#"><b>2018/7/1 研修コースを更新</b></a></h3><p>心臓MRの短期研修コースを追加しました。</p>
+			@foreach($contents as $content)
+				<li>
+
+					<div class="conten-prev-container">
+						<div class="fading-div"><a href="{{ route('get_post',$content->id) }}" class="pull-right text-success">投稿を表示する</a></div>
+						@if(! empty($content->attachments[0]))
+							@if($content->attachments[0]->mime_type==="image")
+								<img width="135" height="92" src="/uploads/{{$content->attachments[0]->filename}}" alt="">
+							@endif
+						@endif
+						<h3><a href="{{ route('get_post',$content->id) }}"><b>{{ date('Y/m/d', strtotime($content->date))  }} {{ $content->title }}</b></a></h3>
+						<p>{!! $content->body !!}</p>
+					</div>
+				</li>
+			@endforeach
 		</ul>
 	</section>
 @endsection

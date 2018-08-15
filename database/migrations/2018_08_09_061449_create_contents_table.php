@@ -19,10 +19,11 @@ class CreateContentsTable extends Migration
             $table->collation = 'utf8_general_ci';
             $table->increments('id');
             $table->string('title', 225);
-            $table->enum('genre', ['plan', 'report', 'news']);
-            $table->string('link')->nullable();
+            $table->enum('genre', ['society', 'others']);
+            $table->longText('link')->nullable();
             $table->string('slug')->nullable();
             $table->longText('body')->nullable();
+            $table->string('created_by', 225);
             $table->date('date');
             $table->timestamps();
             $table->softDeletes();

@@ -14,3 +14,47 @@
 .sky-form, .sky-form .label {
     color: #3a653a;
 }
+#aside nav ul li a:active, #aside nav ul li.menu-open, #aside nav ul li.always-open, #aside nav>ul>li>a:hover, #aside nav>ul>li>a:focus, #aside nav ul li.active, .fancy-file-upload.fancy-file-primary>span.button, .datepicker table tr td.active.active, .btn-primary, #header, .popular .plan-title, body.min #aside ul.nav>li>ul li, body.min #aside ul.nav li.menu-open, body.min #aside ul.nav>li:hover>ul, #aside nav ul li a.dashboard, #aside .logo, body.min #asidesize, #aside, #asidebg {
+    background-color: #476129 !important;
+}
+.form-horizontal .note-image-dialog .form-group, .form-horizontal .note-link-dialog .form-group {
+    margin-right: 15px; 
+    margin-left: 15px; 
+}
+#pdf-attachment+span.form-control{
+    padding-left: 40px;
+}
+.body table{
+    width: 100% !important;
+}
+a {
+    word-wrap: break-word;
+}
+.w3-white{
+    overflow-x: auto;
+}
+
+.content-body{
+    height: 80px; overflow: hidden;
+}
+.btn-container{
+    position: absolute; 
+    bottom: -1px; 
+    right: 0;
+    height: 60px;
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+13&0+0,1+63 */
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.21) 13%, rgba(255,255,255,1) 63%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.21) 13%,rgba(255,255,255,1) 63%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.21) 13%,rgba(255,255,255,1) 63%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.list-inline{
+    height: 20px;
+    padding-top: 40px;
+    padding-left: 48px;
+    *{
+        background: transparent !important;
+    }
+
+}

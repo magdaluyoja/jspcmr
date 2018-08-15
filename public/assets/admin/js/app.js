@@ -12,7 +12,7 @@
 
 
 *************************************************** **/
-	var plugin_path = '/assets/plugins/';
+	var plugin_path = '/assets/admin/plugins/';
 	
 	window.width = jQuery(window).width();
 
@@ -1129,7 +1129,8 @@
 		var _container_1 = jQuery('.datepicker');
 		
 		if(_container_1.length > 0) {
-			loadScript(plugin_path + 'bootstrap.datepicker/js/bootstrap-datepicker.min.js', function() {
+			// loadScript(plugin_path + 'bootstrap.datepicker/js/bootstrap-datepicker.min.js', function() {
+
 		
 				if(jQuery().datepicker) {
 
@@ -1163,7 +1164,7 @@
 					
 				}
 
-			});
+			// });
 		}
 
 
@@ -1329,13 +1330,12 @@
 						var _lang = jQuery(this).attr('data-lang') || 'en-US';
 
 						if(_lang != 'en-US') { // Language!
-						alert(_lang);
 							loadScript(plugin_path + 'editor.summernote/lang/summernote-'+_lang+'.js');
 						}
 
 						jQuery(this).summernote({
 							height: jQuery(this).attr('data-height') || 200,
-							lang: 	jQuery(this).attr('data-lang') || 'en-US', // default: 'en-US'
+							lang: 	_lang, // default: 'en-US'
 							toolbar: [
 							/*	[groupname, 	[button list]]	*/
 								['style', 		['style']],
@@ -1466,7 +1466,7 @@
 		var file_container = jQuery("input[type=file]");
 
 		if(file_container.length > 0) {
-			loadScript(plugin_path + 'custom.fle_upload.js');
+			// loadScript(plugin_path + 'custom.fle_upload.js');
 		}
 
 
