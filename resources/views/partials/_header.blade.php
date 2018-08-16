@@ -15,7 +15,7 @@
 			            </form>
 			        @endif
 			    @else
-			    	<a href="/login" class=" text-success">会員ログイン</a>
+			    	{{-- <a href="/login" class=" text-success">会員ログイン</a> --}}
 				@endif
 			</div>
 		</h1>

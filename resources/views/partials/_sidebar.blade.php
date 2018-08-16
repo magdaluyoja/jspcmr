@@ -5,9 +5,22 @@
 			<p><a href="/posts">一覧</a>
 		</div>
 		<div class="post news">
-			@foreach($contents as $content)
-			<p><a href="{{ route('get_post',$content->id) }}"><time datetime="{{ date('Y/m/d', strtotime($content->date))  }}">{{ date('Y/m/d', strtotime($content->date))  }}</time><span>{{ $content->title }}</span></a>
-			@endforeach
+			@if(count($contents))
+
+				@foreach($contents as $content)
+				<p>
+					<a href="{{ route('get_post',$content->id) }}">
+						<time datetime="{{ date('Y/m/d', strtotime($content->date))  }}">{{ date('Y/m/d', strtotime($content->date))  }}
+						</time>
+						<span>{{ $content->title }}</span>
+					</a>
+				</p>
+				@endforeach
+			@else
+				{{-- <p> --}}
+					表示するデータはありません。
+				{{-- </p> --}}
+			@endif
 		</div>
 	</section>
 	<p class="banner">

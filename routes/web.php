@@ -3,14 +3,14 @@
 
 
 Route::middleware(['auth'])->group(function () {
-	// Route::group(['middleware'  => 'App\Http\Middleware\AdminMiddleware' ], function(){
+	Route::group(['middleware'  => 'App\Http\Middleware\AdminMiddleware' ], function(){
 		Route::prefix('cms')->group(function () {
 		    Route::resource('content','Admin\ContentController');
 		    Route::post('/content/delete-attachment', 'Admin\ContentController@deleteAttachment')->name('deleteAttach');
 		});
 	    Route::get('/cms', 'Admin\DashboardController@getDashboard')->name('cms');
-	// });
-	Route::get('/member', 'MemberController@getMembers');
+	});
+	Route::get('/member', 'MemberController@getMembers')->name('member_page');
 	Route::get('/member/post/{id}', 'MemberController@getMemberPost')->name('get_member_post');
 });
 Auth::routes();

@@ -18,7 +18,8 @@ class MemberMiddleware
         if ( Auth::check() && Auth::user()->roles[0]->name === 'member' )
         {
             return $next($request);
+        }else{
+            return redirect('/');
         }
-        return redirect('/');
     }
 }
