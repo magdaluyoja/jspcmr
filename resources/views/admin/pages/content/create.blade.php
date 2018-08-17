@@ -38,6 +38,13 @@
 		                            </div>
 		                        </div>
 		                        <div class="form-group row">
+		                            <label for="slug" class="bold col-sm-3 control-label col-form-label">Slug <span class="text-danger">*</span></label>
+		                            <div class="col-sm-8">
+		                                <input  type="text" class="form-control" id="slug" name="slug" placeholder="Slug" data-parsley-required value="{{ old('slug') }}">
+		                                <small class="text-muted block">これは、IDを使用する代わりにURLで使用されます。</small>
+		                            </div>
+		                        </div>
+		                        <div class="form-group row">
 		                            <label for="genre" class="bold col-sm-3 control-label col-form-label">ジャンル <span class="text-danger">*</span></label>
 		                            <div class="col-sm-8">
 		                                <select class="form-control required" id="genre" name="genre" data-parsley-required>

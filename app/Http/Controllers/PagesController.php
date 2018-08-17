@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Content;
@@ -55,11 +56,13 @@ class PagesController extends Controller
         $paging = $all_contents->currentPage()."of".$all_contents->total();
         return view('pages.posts')->with("contents",$contents)->with("all_contents",$all_contents)->with("paging",$paging);
     }
-    public function getPost($id){
+    // public function getPost($id){
+    public function getPost($slug){
         $contents = Content::where('created_by','=','admin')->orderby("updated_at","desc")
                     ->limit(5)
                     ->get();
-        $content = Content::where('created_by','=','admin')->find($id);
+        // $content = Content::where('created_by','=','admin')->find($id);
+        $content = Content::where([['created_by','=','admin'],['slug','=',$slug]])->first();
     	return view('pages.post')->with("contents",$contents)->with('content', $content);;
     }
     public function validateMail(Request $request){

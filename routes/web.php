@@ -3,15 +3,16 @@
 
 
 Route::middleware(['auth'])->group(function () {
-	Route::group(['middleware'  => 'App\Http\Middleware\AdminMiddleware' ], function(){
+	// Route::group(['middleware'  => 'App\Http\Middleware\AdminMiddleware' ], function(){
 		Route::prefix('cms')->group(function () {
 		    Route::resource('content','Admin\ContentController');
 		    Route::post('/content/delete-attachment', 'Admin\ContentController@deleteAttachment')->name('deleteAttach');
 		});
 	    Route::get('/cms', 'Admin\DashboardController@getDashboard')->name('cms');
-	});
-	Route::get('/member', 'MemberController@getMembers')->name('member_page');
-	Route::get('/member/post/{id}', 'MemberController@getMemberPost')->name('get_member_post');
+	// });
+	Route::get('/member', 'MemberController@getMembers');
+	// Route::get('/member/post/{id}', 'MemberController@getMemberPost')->name('get_member_post');
+	Route::get('/member/post/{slug}', 'MemberController@getMemberPost')->name('get_member_post');
 });
 Auth::routes();
 
@@ -22,7 +23,8 @@ Route::get('/bureau', 'PagesController@getBureau');
 Route::get('/training', 'PagesController@getTraining');
 Route::get('/conference', 'PagesController@getConference');
 Route::get('/posts', 'PagesController@getPosts');
-Route::get('/post/{id}', 'PagesController@getPost')->name('get_post');
+// Route::get('/post/{id}', 'PagesController@getPost')->name('get_post');
+Route::get('/post/{slug}', 'PagesController@getPost')->name('get_post');
 
 Route::get('/contact-us', 'PagesController@getContactUs')->name('contact_us');
 

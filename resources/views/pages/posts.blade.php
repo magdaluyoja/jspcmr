@@ -16,13 +16,13 @@
                         @foreach($all_contents as $content)
                             <li>
                                 <div class="conten-prev-container">
-                                    <div class="fading-div"><a href="{{ route('get_post',$content->id) }}" class="pull-right text-success">投稿を表示する</a></div>
+                                    <div class="fading-div"><a href="{{ route('get_post',$content->slug) }}" class="pull-right text-success">投稿を表示する</a></div>
                                     @if(! empty($content->attachments[0]))
                                         @if($content->attachments[0]->mime_type==="image")
                                             <img width="135" height="92" src="/uploads/{{$content->attachments[0]->filename}}" alt="{{$content->attachments[0]->filename}}">
                                         @endif
                                     @endif
-                                    <h3><a href="{{ route('get_post',$content->id) }}"><b>{{ date('Y/m/d', strtotime($content->date))  }} {{ $content->title }}</b></a></h3>
+                                    <h3><a href="{{ route('get_post',$content->slug) }}"><b>{{ date('Y/m/d', strtotime($content->date))  }} {{ $content->title }}</b></a></h3>
                                     <p>{!! $content->body !!}</p>
                                 </div>
                             </li>

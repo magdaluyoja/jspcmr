@@ -4,7 +4,10 @@ $("document").ready(function() {
         todayHighlight: true,
         format: "yyyy-mm-dd"
     });
-
+    $('#title').change(function(){
+    	var slug = this.value.replace(/\s+/g, '-').toLowerCase();
+    	$('#slug').val(slug);
+    });
     $("#pdf-attachment").change(function(){
 		var files = "";
 		const types = ['pdf', 'jpg', 'jpeg', 'png']; 

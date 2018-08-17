@@ -4,7 +4,7 @@
 			日本小児心臓MR研究会学術研究会(Japanese Society of Pediatric Cardiac Magnetic Resonancece)
 			<div class="pull-right">
 				@if(Auth::user())
-					@if(Auth::user()->roles[0]->name == "member")
+					{{-- @if(Auth::user()->roles[0]->name == "member") --}}
 						<a  href="{{ route('logout') }}"
 			                onclick="   event.preventDefault();
 			                            document.getElementById('logout-form').submit();" class=" text-success">
@@ -13,7 +13,7 @@
 			            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 			                {{ csrf_field() }}
 			            </form>
-			        @endif
+			        {{-- @endif --}}
 			    @else
 			    	{{-- <a href="/login" class=" text-success">会員ログイン</a> --}}
 				@endif

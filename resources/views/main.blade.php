@@ -10,7 +10,7 @@
 		@include('partials._topnav')
 		@if(Request::is('/'))
 			<div id="mainImg">
-				<img src="/assets/web/images/banners/mainImg.jpg" width="880" height="287" alt="">
+				<img src="/images/top_img.jpg" width="880" height="287" alt="">
 			</div>
 		@endif
 		<div id="wrapper">

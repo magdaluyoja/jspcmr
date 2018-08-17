@@ -1,7 +1,7 @@
 @if(count($content))
-	@section('title',' | '.$content->title)
+	@section('title',$content->title)
 @else
-	@section('title',' | 表示するデータはありません。')
+	@section('title','表示するデータはありません。')
 @endif
 @section('css')
 

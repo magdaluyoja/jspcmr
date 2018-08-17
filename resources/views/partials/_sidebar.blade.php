@@ -9,7 +9,8 @@
 
 				@foreach($contents as $content)
 				<p>
-					<a href="{{ route('get_post',$content->id) }}">
+					{{-- <a href="{{ route('get_post',$content->id) }}"> --}}
+					<a href="{{ route('get_post',$content->slug) }}">
 						<time datetime="{{ date('Y/m/d', strtotime($content->date))  }}">{{ date('Y/m/d', strtotime($content->date))  }}
 						</time>
 						<span>{{ $content->title }}</span>

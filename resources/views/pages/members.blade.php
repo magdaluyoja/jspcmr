@@ -21,7 +21,8 @@
 											{{ ($content->genre === "society") ? "学会" : "その他" }}
 										</span>
 									</td>
-									<td class="td-title"><a href="{{route('get_member_post',$content->id)}}" class="text-success">{{$content->title}}</a></td>
+									{{-- <td class="td-title"><a href="{{route('get_member_post',$content->id)}}" class="text-success">{{$content->title}}</a></td> --}}
+									<td class="td-title"><a href="{{route('get_member_post',$content->slug)}}" class="text-success">{{$content->title}}</a></td>
 								</tr>
 							@endforeach
 					</table>

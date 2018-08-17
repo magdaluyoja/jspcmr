@@ -52,6 +52,7 @@ class ContentController extends Controller
             "date"=>"required|date",
             "title"=>"required|max:255",
             "genre"=>"required",
+            "slug"=>"required|unique:contents",
         ));
         if($request->link){
             $this->validate($request, array(
@@ -63,6 +64,7 @@ class ContentController extends Controller
         $content->genre = $request->genre;
         $content->link = $request->link;
         $content->body = $request->body;
+        $content->slug = str_replace(' ', '-', $request->slug);
         $content->created_by = Auth::user()->roles[0]->name;
         $content->date = $request->date;
         $content->save();
@@ -148,6 +150,7 @@ class ContentController extends Controller
             "date"=>"required|date",
             "title"=>"required|max:255",
             "genre"=>"required",
+            "slug"=>"required|unique:contents,slug,{$request->slug},slug",
         ));
 
 
@@ -155,6 +158,7 @@ class ContentController extends Controller
         $content->genre = $request->genre;
         $content->link = $request->link;
         $content->body = $request->body;
+        $content->slug = str_replace(' ', '-', $request->slug);
         $content->created_by = Auth::user()->roles[0]->name;
         $content->date = $request->date;
         $content->save();

@@ -16,11 +16,6 @@ class RoleTableSeeder extends Seeder
 	    $role_admin->description = 'An Admin User';
 	    $role_admin->save();
 
-	    $role_admin = new Role();
-	    $role_admin->name = 'admin-member';
-	    $role_admin->description = 'An Admin Member User';
-	    $role_admin->save();
-
 	    $role_member = new Role();
 	    $role_member->name = 'member';
 	    $role_member->description = 'A Member User';
